@@ -1,0 +1,79 @@
+# This workflow will run GitHub release packaging and VSIX upload workflow
+
+name: Publish Extension
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'          # e.g. v1.2.3
+
+# Required since GitHub’s default token permissions are now read‑only
+permissions:
+  contents: write
+  id-token: write     # future‑proof (e.g. for provenance / sigstore)
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Source
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Toolchain
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+      # 3. Dependencies & tests
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test
+
+      # 4. Build & package
+      - name: Build extension
+        run: npm run build
+
+      - name: Derive version and preview flag
+        id: meta
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          PREVIEW=$(node -p "require('./package.json').preview === true")
+          echo "VERSION=$VERSION"  >>"$GITHUB_OUTPUT"
+          echo "PREVIEW=$PREVIEW"  >>"$GITHUB_OUTPUT"
+
+      - name: Package VSIX
+        run: |
+          # uses the local devDependency "vsce"; remove npx if you install vsce globally
+          npx vsce package -o midnight-dark-theme-${{ steps.meta.outputs.VERSION }}.vsix
+
+      # 5. Release + asset upload (one step)
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.meta.outputs.VERSION }}
+          name: Midnight dark ${{ steps.meta.outputs.VERSION }}
+          body: |
+            ## Midnight dark ${{ steps.meta.outputs.VERSION }}
+
+            ### What's New
+            - See [CHANGELOG.md](https://github.com/nayandas69/midnight-dark-theme/blob/main/CHANGELOG.md)
+
+            ### Installation
+            - Download the **.vsix** below and install it manually in VS Code
+
+            ### Bug Reports
+            - Please file issues on [GitHub](https://github.com/nayandas69/midnight-dark-theme/issues)
+
+            ---
+            **Full Changelog**: https://github.com/nayandas69/midnight-dark-theme/compare/v1.0.0...${{ steps.meta.outputs.VERSION }}
+          files: midnight-dark-theme-${{ steps.meta.outputs.VERSION }}.vsix
+          draft: false
+          prerelease: ${{ steps.meta.outputs.PREVIEW == 'true' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
