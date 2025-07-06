@@ -132,6 +132,7 @@ npm run test         # Run all tests
 npm run test:colors  # Test color contrast
 npm run test:syntax  # Test syntax highlighting
 npm run lint         # Lint theme JSON
+npm run format       # Format
 
 # Building
 npm run build        # Build and validate theme
