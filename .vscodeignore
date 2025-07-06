@@ -1,0 +1,16 @@
+# Exclude dev-related files and folders
+.gitignore
+.vscode/
+.github/
+scripts/
+demo/
+coverage/
+test-results.json
+DEVELOP.md
+
+# Node-related
+node_modules/
+package-lock.json
+
+# Build outputs (optional)
+dist/
