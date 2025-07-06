@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Dark Theme Demo</title>
+    <style>
+        /* CSS demonstrating the theme's styling syntax highlighting */
+        :root {
+            --primary-color: #c792ea;
+            --secondary-color: #89ddff;
+            --accent-color: #c3e88d;
+            --text-color: #c0caf5;
+            --background-color: #1a1b26;
+            --card-background: #24283b;
+            --border-color: #33467c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .demo-section {
+            margin-bottom: 30px;
+        }
+
+        .demo-section h2 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+        }
+
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .color-item {
+            background-color: var(--background-color);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .color-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .color-swatch {
+            width: 100%;
+            height: 50px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .color-swatch.purple {
+            background-color: var(--primary-color);
+        }
+
+        .color-swatch.cyan {
+            background-color: var(--secondary-color);
+        }
+
+        .color-swatch.green {
+            background-color: var(--accent-color);
+        }
+
+        .color-swatch.pink {
+            background-color: #f07178;
+        }
+
+        .color-swatch.gray {
+            background-color: #5c6370;
+        }
+
+        .color-swatch.dark {
+            background-color: var(--background-color);
+        }
+
+        .color-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .color-hex {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
+
+        .code-demo {
+            background-color: var(--background-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+
+        .code-demo .keyword {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .code-demo .string {
+            color: #f07178;
+        }
+
+        .code-demo .function {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .code-demo .constant {
+            color: var(--accent-color);
+        }
+
+        .code-demo .comment {
+            color: #5c6370;
+            font-style: italic;
+        }
+
+        .code-demo .number {
+            color: var(--accent-color);
+        }
+
+        .interactive-demo {
+            background-color: var(--background-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .btn:hover {
+            background-color: #bb9af7;
+            transform: translateY(-2px);
+        }
+
+        .btn.secondary {
+            background-color: var(--secondary-color);
+        }
+
+        .btn.secondary:hover {
+            background-color: #7dcfff;
+        }
+
+        .btn.accent {
+            background-color: var(--accent-color);
+        }
+
+        .btn.accent:hover {
+            background-color: #a9e36c;
+        }
+
+        .output {
+            background-color: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            min-height: 100px;
+            white-space: pre-wrap;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li::before {
+            content: "✨";
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .color-palette {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Midnight Dark</h1>
+        <p class="subtitle">A mystical dark theme for VS Code</p>
+
+        <div class="demo-section">
+            <h2>Color Palette</h2>
+            <div class="color-palette">
+                <div class="color-item">
+                    <div class="color-swatch purple"></div>
+                    <div class="color-name">Functions/Variables</div>
+                    <div class="color-hex">#c792ea</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch cyan"></div>
+                    <div class="color-name">Keywords/Operators</div>
+                    <div class="color-hex">#89ddff</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch green"></div>
+                    <div class="color-name">Constants/Types</div>
+                    <div class="color-hex">#c3e88d</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch pink"></div>
+                    <div class="color-name">Strings</div>
+                    <div class="color-hex">#f07178</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch gray"></div>
+                    <div class="color-name">Comments</div>
+                    <div class="color-hex">#5c6370</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch dark"></div>
+                    <div class="color-name">Background</div>
+                    <div class="color-hex">#1a1b26</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Code Preview</h2>
+            <div class="code-demo">
+                <span class="comment">// JavaScript example showing syntax highlighting</span>
+                <span class="keyword">async function</span> <span class="function">fetchUserData</span>(<span
+                    class="constant">userId</span>) {
+                <span class="keyword">try</span> {
+                <span class="keyword">const</span> <span class="constant">response</span> = <span
+                    class="keyword">await</span> <span class="function">fetch</span>(<span
+                    class="string">`/api/users/${userId}`</span>);
+                <span class="keyword">const</span> <span class="constant">data</span> = <span
+                    class="keyword">await</span> response.<span class="function">json</span>();
+
+                <span class="keyword">return</span> {
+                <span class="constant">success</span>: <span class="keyword">true</span>,
+                <span class="constant">user</span>: data,
+                <span class="constant">timestamp</span>: <span class="number">Date.now()</span>
+                };
+                } <span class="keyword">catch</span> (<span class="constant">error</span>) {
+                <span class="function">console.error</span>(<span class="string">'Failed to fetch user:'</span>, error);
+                <span class="keyword">return</span> { <span class="constant">success</span>: <span
+                    class="keyword">false</span>, <span class="constant">error</span> };
+                }
+                }
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Interactive Demo</h2>
+            <div class="interactive-demo">
+                <button class="btn" onclick="demoFunction('purple')">Purple Function</button>
+                <button class="btn secondary" onclick="demoFunction('cyan')">Cyan Keywords</button>
+                <button class="btn accent" onclick="demoFunction('green')">Green Constants</button>
+                <button class="btn" onclick="clearOutput()">Clear Output</button>
+                <div class="output" id="output">Click a button to see the theme colors in action!</div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Features</h2>
+            <ul class="feature-list">
+                <li>Deep midnight blue background that's easy on the eyes</li>
+                <li>Beautiful purple accents for functions and variables</li>
+                <li>Bright cyan highlighting for keywords and operators</li>
+                <li>Vibrant green for constants and data types</li>
+                <li>Soft pink for string literals</li>
+                <li>Subtle gray for comments and documentation</li>
+                <li>Comprehensive UI theming for all VS Code elements</li>
+                <li>Optimized for multiple programming languages</li>
+                <li>Accessible color contrast ratios</li>
+                <li>Consistent theming across all interface components</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript demonstrating the theme's syntax highlighting
+
+        /**
+         * Demo function to show interactive color features
+         * @param {string} colorType - The type of color to demonstrate
+         */
+        function demoFunction(colorType) {
+            const output = document.getElementById('output');
+            const timestamp = new Date().toLocaleTimeString();
+
+            // Color-specific demonstrations
+            const demos = {
+                purple: {
+                    title: 'Purple - Functions & Variables',
+                    code: `const myFunction = () => {\n    const variable = "Hello World";\n    return variable.toUpperCase();\n};`,
+                    description: 'Used for function names, variable declarations, and method calls'
+                },
+                cyan: {
+                    title: 'Cyan - Keywords & Operators',
+                    code: `if (condition === true) {\n    return await processData();\n} else {\n    throw new Error("Invalid condition");\n}`,
+                    description: 'Used for language keywords, operators, and control flow'
+                },
+                green: {
+                    title: 'Green - Constants & Types',
+                    code: `const PI = 3.14159;\nconst MAX_USERS = 100;\nconst config: Config = {\n    timeout: 5000,\n    retries: 3\n};`,
+                    description: 'Used for constants, numbers, and type definitions'
+                }
+            };
+
+            const demo = demos[colorType];
+            if (demo) {
+                output.innerHTML = `
+[${timestamp}] ${demo.title}
+
+${demo.code}
+
+${demo.description}
+
+Color: ${colorType.toUpperCase()}
+Theme: Midnight Dark
+Status: Active ✨
+                `;
+            }
+        }
+
+        /**
+         * Clear the output display
+         */
+        function clearOutput() {
+            const output = document.getElementById('output');
+            output.innerHTML = 'Output cleared. Click a button to see the theme colors in action!';
+        }
+
+        // Initialize the demo
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Midnight Dark theme demo loaded!');
+
+            // Add some dynamic styling
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', () => {
+                    button.style.transform = 'translateY(-2px)';
+                });
+
+                button.addEventListener('mouseleave', () => {
+                    button.style.transform = 'translateY(0)';
+                });
+            });
+        });
+
+        // Theme color variables for JavaScript access
+        const themeColors = {
+            primary: '#c792ea',
+            secondary: '#89ddff',
+            accent: '#c3e88d',
+            text: '#c0caf5',
+            background: '#1a1b26',
+            strings: '#f07178',
+            comments: '#5c6370'
+        };
+
+        // Export for potential module usage
+        if (typeof module !== 'undefined' && module.exports) {
+            module.exports = { demoFunction, clearOutput, themeColors };
+        }
+    </script>
+</body>
+
+</html>

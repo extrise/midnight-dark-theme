@@ -1,0 +1,74 @@
+{
+  "name": "midnight-dark-theme",
+  "displayName": "Midnight Dark",
+  "description": "A beautiful dark theme with purple, cyan, and neon accents for VS Code",
+  "version": "0.9.0",
+  "preview": true,
+  "publisher": "ExtRise",
+  "author": {
+    "name": "nayandas69",
+    "email": "nayanchandradas@hotmail.com",
+    "url": "https://github.com/nayandas69"
+  },
+  "license": "MIT",
+  "keywords": [
+    "theme",
+    "dark",
+    "midnight",
+    "purple",
+    "cyan",
+    "color-theme",
+    "neon",
+    "beautiful",
+    "elegant"
+  ],
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Midnight Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/midnight-dark-color-theme.json"
+      }
+    ]
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nayandas69/midnight-dark-theme.git"
+  },
+  "homepage": "https://github.com/nayandas69/midnight-dark-theme#readme",
+  "bugs": {
+    "url": "https://github.com/nayandas69/midnight-dark-theme/issues"
+  },
+  "galleryBanner": {
+    "color": "#1a1b26",
+    "theme": "dark"
+  },
+  "icon": "icon.png",
+  "scripts": {
+    "dev": "npm run watch",
+    "watch": "nodemon --watch themes --ext json --exec \"npm run build\"",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js",
+    "test:colors": "node scripts/test.js --colors",
+    "test:accessibility": "node scripts/test.js --accessibility",
+    "lint": "node scripts/build.js --lint",
+    "format": "prettier --write \"**/*.{json,md,js}\"",
+    "format:check": "prettier --check \"**/*.{json,md,js}\"",
+    "clean": "node scripts/build.js --clean",
+    "package": "mkdir -p dist && vsce package -o dist/midnight-dark-theme.vsix",
+    "publish": "vsce publish",
+    "publish:pre": "vsce publish --pre-release",
+    "report:accessibility": "node scripts/test.js --report-accessibility"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^2.22.0",
+    "nodemon": "^3.0.2",
+    "prettier": "^3.1.1"
+  }
+}
