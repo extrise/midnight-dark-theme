@@ -2,14 +2,12 @@
 
 All notable changes to the "Midnight Dark" theme will be documented in this file.
 
----
-
 ## Pre-Release [0.9.1] - 2025-07-07
 
 ### Color Themes Added
 
 - Midnight Light **(NEW)**
-- Midnight Soft  **(NEW)**
+- Midnight Soft **(NEW)**
 - Midnight Dark
 
 ---

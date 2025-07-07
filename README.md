@@ -14,6 +14,7 @@ A mystical Dark theme for VS Code with purple, cyan, and neon green accents that
 </p>
 
 ## Color Themes
+
 - Midnight Dark
 - Midnight Light
 - Midnight Soft
