@@ -142,6 +142,16 @@ function validatePackageJson() {
   }
 }
 
+// ↓ NEW helper
+function getThemePaths() {
+  // package.json lives one level above scripts/
+  const pkgPath = path.join(__dirname, "..", "package.json");
+  const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
+
+  // returns ["themes/midnight-dark-color-theme.json", ...]
+  return pkg.contributes.themes.map((t) => t.path);
+}
+
 /**
  * Check for required files
  */
@@ -152,7 +162,8 @@ function checkRequiredFiles() {
     "README.md",
     "LICENSE",
     "CHANGELOG.md",
-    "themes/midnight-dark-color-theme.json",
+    ...getThemePaths(), // ← adds all listed themes from package.json
+    "package.json",
   ];
 
   let allFilesExist = true;
