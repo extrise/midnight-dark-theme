@@ -5,6 +5,19 @@ A mystical Dark theme for VS Code with purple, cyan, and neon green accents that
 [![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/ExtRise.midnight-dark-theme?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://marketplace.visualstudio.com/items?itemName=ExtRise.midnight-dark-theme)
 [![License](https://img.shields.io/github/license/nayandas69/midnight-dark-theme?style=for-the-badge)](https://github.com/nayandas69/midnight-dark-theme/blob/main/LICENSE)
 
+## Pre-view
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/nayandas69/midnight-dark-theme/refs/heads/dev/preview/soft.png" alt="Soft Theme Preview" width="30%"/>
+  <img src="https://raw.githubusercontent.com/nayandas69/midnight-dark-theme/refs/heads/dev/preview/light.png" alt="Light Theme Preview" width="30%"/>
+  <img src="https://raw.githubusercontent.com/nayandas69/midnight-dark-theme/refs/heads/dev/preview/dark.png" alt="Dark Theme Preview" width="30%"/>
+</p>
+
+## Color Themes
+- Midnight Dark
+- Midnight Light
+- Midnight Soft
+
 ## Features
 
 - [x] **Deep Midnight Background** - Easy on the eyes for long coding sessions
@@ -43,7 +56,7 @@ A mystical Dark theme for VS Code with purple, cyan, and neon green accents that
 
 ### Manual Installation
 
-1. Download the latest `.vsix` file from [Releases](https://github.com/nayandas69/midnight-dark-theme/releases)
+1. Download the latest `.vsix` file from [Releases](https://github.com/nayandas69/midnight-dark-theme/releases) or [Marketplace](https://marketplace.visualstudio.com/items?itemName=ExtRise.midnight-dark-theme)
 2. In VS Code, press `Ctrl+Shift+P` / `Cmd+Shift+P`
 3. Type **"Extensions: Install from VSIX"**
 4. Select the downloaded file
