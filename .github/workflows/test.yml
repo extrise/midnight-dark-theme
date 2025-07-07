@@ -1,4 +1,4 @@
-# This workflow will run tests using node
+# This workflow will run tests using Node.js
 
 name: Test Suite
 
@@ -79,12 +79,12 @@ jobs:
     - name: Test color contrast
       run: npm run test:accessibility
       
-    - name: Generate accessibility report
-      run: npm run report:accessibility
-      
-    - name: Upload accessibility report
-      uses: actions/upload-artifact@v4
-      with:
-        name: accessibility-report
-        path: accessibility-report.html
-        retention-days: 30
+    # - name: Generate accessibility report
+    #   run: npm run report:accessibility
+
+    # - name: Upload accessibility report
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: accessibility-report
+    #     path: accessibility-report.html
+    #     retention-days: 30
