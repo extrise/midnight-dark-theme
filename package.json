@@ -15,6 +15,7 @@
     "theme",
     "dark",
     "light",
+    "soft",
     "midnight",
     "purple",
     "cyan",
@@ -37,6 +38,11 @@
         "label": "Midnight Light",
         "uiTheme": "vs",
         "path": "./themes/midnight-light-color-theme.json"
+      },
+      {
+        "label": "Midnight Soft",
+        "uiTheme": "vs-dark",
+        "path": "./themes/midnight-soft-color-theme.json"
       }
     ]
   },
