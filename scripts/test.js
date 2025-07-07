@@ -270,6 +270,16 @@ function validateThemeJson() {
   }
 }
 
+// ↓ NEW helper
+function getThemePaths() {
+  // package.json lives one level above scripts/
+  const pkgPath = path.join(__dirname, "..", "package.json");
+  const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
+
+  // returns ["themes/midnight-dark-color-theme.json", ...]
+  return pkg.contributes.themes.map((t) => t.path);
+}
+
 /**
  * Check for required files
  */
@@ -277,18 +287,20 @@ function checkRequiredFiles() {
   log("🔍 Checking required files...", "blue");
 
   const requiredFiles = [
-    "README.md",
-    "LICENSE",
-    "CHANGELOG.md",
-    "themes/midnight-dark-color-theme.json",
-    "package.json",
+    ...new Set([
+      "README.md",
+      "LICENSE",
+      "CHANGELOG.md",
+      ...getThemePaths(), // ← all three JSON files now included
+      "package.json",
+      // "icon.png", ".gitignore", "DEVELOP.md", // make mandatory if you prefer
+    ]),
   ];
 
   const optionalFiles = ["icon.png", ".gitignore", "DEVELOP.md"];
 
   let allRequiredExist = true;
 
-  // Check required files
   for (const file of requiredFiles) {
     const filePath = path.join(__dirname, "..", file);
     if (!fs.existsSync(filePath)) {
@@ -299,7 +311,6 @@ function checkRequiredFiles() {
     }
   }
 
-  // Check optional files
   for (const file of optionalFiles) {
     const filePath = path.join(__dirname, "..", file);
     if (!fs.existsSync(filePath)) {
@@ -309,11 +320,12 @@ function checkRequiredFiles() {
     }
   }
 
-  if (allRequiredExist) {
-    log("✅ Required files check passed", "green");
-  } else {
-    log("❌ Required files check failed", "red");
-  }
+  log(
+    allRequiredExist
+      ? "✅ Required files check passed"
+      : "❌ Required files check failed",
+    allRequiredExist ? "green" : "red",
+  );
 
   return allRequiredExist;
 }
