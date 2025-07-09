@@ -17,7 +17,7 @@ This document provides comprehensive information about developing, building, and
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/nayandas69/midnight-dark-theme.git
+   git clone https://github.com/extrise/midnight-dark-theme.git
    cd midnight-dark-theme
    ```
 
@@ -352,8 +352,8 @@ We use GitHub Actions for automated publishing:
 ### Getting Help
 
 1. **Documentation** - Check README.md and this file
-2. **Issues** - [GitHub Issues](https://github.com/nayandas69/midnight-dark-theme/issues)
-3. **Discussions** - [GitHub Discussions](https://github.com/nayandas69/midnight-dark-theme/discussions)
+2. **Issues** - [GitHub Issues](https://github.com/extrise/midnight-dark-theme/issues)
+3. **Discussions** - [GitHub Discussions](https://github.com/extrise/midnight-dark-theme/discussions)
 4. **Email** - [nayanchandradas@hotmail.com](mailto:nayanchandradas@hotmail.com)
 
 ### Maintainer

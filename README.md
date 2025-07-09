@@ -3,7 +3,7 @@
 A mystical Dark theme for VS Code with purple, cyan, and neon green accents that creates an enchanting coding environment. Perfect for developers who love beautiful, eye-friendly themes with excellent syntax highlighting.
 
 [![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/ExtRise.midnight-dark-theme?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://marketplace.visualstudio.com/items?itemName=ExtRise.midnight-dark-theme)
-[![License](https://img.shields.io/github/license/nayandas69/midnight-dark-theme?style=for-the-badge)](https://github.com/nayandas69/midnight-dark-theme/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/nayandas69/midnight-dark-theme?style=for-the-badge)](https://github.com/extrise/midnight-dark-theme/blob/main/LICENSE)
 
 ## Pre-view
 
@@ -16,8 +16,11 @@ A mystical Dark theme for VS Code with purple, cyan, and neon green accents that
 ## Color Themes
 
 - Midnight Dark
-- Midnight Light
 - Midnight Soft
+- Midnight Light
+- Midnight Ocean
+- Midnight Forest
+- Midnight Monochrome
 
 ## Features
 
@@ -28,7 +31,7 @@ A mystical Dark theme for VS Code with purple, cyan, and neon green accents that
 - [x] **Soft Pink Strings** - Gentle coloring for string literals
 - [x] **Subtle Gray Comments** - Non-intrusive comment styling
 - [x] **Complete UI Theming** - Consistent design across all VS Code elements
-- [x] **Multi-Language Support** - Optimized for 8+ programming languages
+- [x] **Multi-Language Support** - Optimized for 9+ programming languages
 - [x] **Accessibility Focused** - WCAG compliant color contrast ratios
 - [x] **Terminal Integration** - Matching ANSI color scheme
 - [x] **Git Integration** - Color-coded file status indicators
@@ -57,7 +60,7 @@ A mystical Dark theme for VS Code with purple, cyan, and neon green accents that
 
 ### Manual Installation
 
-1. Download the latest `.vsix` file from [Releases](https://github.com/nayandas69/midnight-dark-theme/releases) or [Marketplace](https://marketplace.visualstudio.com/items?itemName=ExtRise.midnight-dark-theme)
+1. Download the latest `.vsix` file from [Releases](https://github.com/extrise/midnight-dark-theme/releases) or [Marketplace](https://marketplace.visualstudio.com/items?itemName=ExtRise.midnight-dark-theme)
 2. In VS Code, press `Ctrl+Shift+P` / `Cmd+Shift+P`
 3. Type **"Extensions: Install from VSIX"**
 4. Select the downloaded file
@@ -66,7 +69,7 @@ A mystical Dark theme for VS Code with purple, cyan, and neon green accents that
 ### From Source
 
 ```bash
-git clone https://github.com/nayandas69/midnight-dark-theme.git
+git clone https://github.com/extrise/midnight-dark-theme.git
 cd midnight-dark-theme
 npm install
 npm run build
@@ -95,7 +98,7 @@ The theme includes optimized syntax highlighting for:
 - [ ] **More languages planned!**
 
 > [!NOTE]
-> If you'd like support for a specific language, please [open an issue](https://github.com/nayandas69/midnight-dark-theme/issues) with examples!
+> If you'd like support for a specific language, please [open an issue](https://github.com/extrise/midnight-dark-theme/issues) with examples!
 
 ## Customization
 
@@ -127,8 +130,8 @@ We welcome contributions! Here's how you can help:
 
 ### Ways to Contribute
 
-- [x] **Report Bugs** - Found an issue? [Open a bug report](https://github.com/nayandas69/midnight-dark-theme/issues/new?template=bug_report.md)
-- [x] **Suggest Features** - Have an idea? [Request a feature](https://github.com/nayandas69/midnight-dark-theme/issues/new?template=feature_request.md)
+- [x] **Report Bugs** - Found an issue? [Open a bug report](https://github.com/extrise/midnight-dark-theme/issues/new?template=bug_report.md)
+- [x] **Suggest Features** - Have an idea? [Request a feature](https://github.com/extrise/midnight-dark-theme/issues/new?template=feature_request.md)
 - [x] **Improve Colors** - Submit color improvements or new variants
 - [x] **Documentation** - Help improve docs, examples, or translations
 - [x] **Code** - Fix bugs, add features, or optimize performance
@@ -138,7 +141,7 @@ We welcome contributions! Here's how you can help:
 1. **Fork the repository**
 
    ```bash
-   git clone https://github.com/nayandas69/midnight-dark-theme.git
+   git clone https://github.com/extrise/midnight-dark-theme.git
    cd midnight-dark-theme
    ```
 
@@ -162,17 +165,9 @@ We welcome contributions! Here's how you can help:
 5. **Submit a pull request**
 
 > [!TIP]
-> Check out our [DEVELOP.md](https://github.com/nayandas69/midnight-dark-theme/blob/main/DEVELOP.md) for detailed development guidelines and roadmap!
+> Check out our [DEVELOP.md](https://github.com/extrise/midnight-dark-theme/blob/main/DEVELOP.md) for detailed development guidelines and roadmap!
 
 ## Roadmap
-
-### Current Version Pre-Release (v0.9.0)
-
-- [x] Complete dark theme implementation
-- [x] Multi-language syntax highlighting
-- [x] Comprehensive UI theming
-- [x] Terminal integration
-- [x] Git decorations
 
 ### Upcoming Features
 
@@ -185,14 +180,14 @@ We welcome contributions! Here's how you can help:
 - [ ] **Bracket Pair Colorization** - Custom bracket colors
 
 > [!NOTE]
-> Want to influence our roadmap? [Join the discussion](https://github.com/nayandas69/midnight-dark-theme/discussions) and share your ideas!
+> Want to influence our roadmap? [Join the discussion](https://github.com/extrise/midnight-dark-theme/discussions) and share your ideas!
 
 ## Statistics
 
-- **Total Colors Defined**: 150+ UI colors
+- **Total Colors Defined**: 200+ UI colors
 - **Syntax Rules**: 50+ token color rules
-- **Language Support**: 15+ programming languages
-- **File Size**: ~25KB (optimized for performance)
+- **Language Support**: 9+ programming languages
+- **File Size**: ~150KB (optimized for performance)
 - **Accessibility**: WCAG AA compliant
 
 ## Troubleshooting
@@ -212,14 +207,14 @@ We welcome contributions! Here's how you can help:
 ### Performance Issues
 
 - The theme is optimized and shouldn't affect performance
-- If you experience issues, please [report them](https://github.com/nayandas69/midnight-dark-theme/issues)
+- If you experience issues, please [report them](https://github.com/extrise/midnight-dark-theme/issues)
 
 > [!CAUTION]
 > If you're using custom CSS extensions or theme modifications, they might conflict with Midnight dark. Try disabling them to isolate issues.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/nayandas69/midnight-dark-theme/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/extrise/midnight-dark-theme/blob/main/LICENSE) file for details.
 
 ## Author
 

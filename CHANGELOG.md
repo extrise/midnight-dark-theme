@@ -2,6 +2,37 @@
 
 All notable changes to the "Midnight Dark" theme will be documented in this file.
 
+---
+
+## Pre-Release [0.9.2] - 2025-07-09
+
+### New Color Themes Added
+
+- **Midnight Monochrome** **(NEW)**
+  - Pure black and white aesthetic for minimalist coding
+  - Grayscale color palette with high contrast
+  - Perfect for developers who prefer monochromatic themes
+
+- **Midnight Ocean** **(NEW)**
+  - Deep ocean-inspired blues and aqua tones
+  - Calming underwater atmosphere for focused coding
+  - Rich blue palette with cyan and teal accents
+
+- **Midnight Forest** **(NEW)**
+  - Nature-inspired greens with forest atmosphere
+  - Deep forest background with natural green highlights
+  - Soothing earth tones for comfortable long coding sessions
+
+### Features
+
+- **6 Complete Themes**: Dark, Light, Soft, Monochrome, Ocean, Forest
+- **Comprehensive UI Theming**: All themes include full VS Code interface styling
+- **Consistent Syntax Highlighting**: Unified token color rules across all themes
+- **Terminal Integration**: Matching ANSI color schemes for all themes
+- **Accessibility Focused**: Proper contrast ratios maintained across all variants
+
+---
+
 ## Pre-Release [0.9.1] - 2025-07-07
 
 ### Color Themes Added

@@ -2,7 +2,7 @@
   "name": "midnight-dark-theme",
   "displayName": "Midnight Dark",
   "description": "A beautiful dark theme with purple, cyan, and neon accents for VS Code",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "preview": true,
   "publisher": "ExtRise",
   "author": {
@@ -43,6 +43,21 @@
         "label": "Midnight Soft",
         "uiTheme": "vs-dark",
         "path": "./themes/midnight-soft-color-theme.json"
+      },
+      {
+        "label": "Midnight Forest",
+        "uiTheme": "vs-dark",
+        "path": "./themes/midnight-forest-color-theme.json"
+      },
+      {
+        "label": "Midnight Ocean",
+        "uiTheme": "vs-dark",
+        "path": "./themes/midnight-ocean-color-theme.json"
+      },
+      {
+        "label": "Midnight Monochrome",
+        "uiTheme": "vs-dark",
+        "path": "./themes/midnight-monochrome-color-theme.json"
       }
     ]
   },
@@ -51,11 +66,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nayandas69/midnight-dark-theme.git"
+    "url": "https://github.com/extrise/midnight-dark-theme.git"
   },
-  "homepage": "https://github.com/nayandas69/midnight-dark-theme#readme",
+  "homepage": "https://github.com/extrise/midnight-dark-theme#readme",
   "bugs": {
-    "url": "https://github.com/nayandas69/midnight-dark-theme/issues"
+    "url": "https://github.com/extrise/midnight-dark-theme/issues"
   },
   "galleryBanner": {
     "color": "#1a1b26",
