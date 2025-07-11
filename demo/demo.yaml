@@ -1,0 +1,193 @@
+# Midnight Dark Theme Demo - YAML
+# Demonstrates YAML syntax highlighting with various features and structures
+
+# Application Configuration
+app:
+  name: "Midnight Dark Demo"
+  version: &version "1.0.0"
+  description: |
+    A comprehensive demo application showcasing
+    YAML syntax highlighting capabilities
+  
+  # Environment settings
+  environment: &env
+    development:
+      debug: true
+      log_level: "debug"
+      database_url: "postgresql://localhost:5432/demo_dev"
+    
+    production:
+      debug: false
+      log_level: "info"
+      database_url: ${DATABASE_URL}
+    
+    testing:
+      debug: true
+      log_level: "debug"
+      database_url: "sqlite:///:memory:"
+
+# Server Configuration
+server:
+  host: "0.0.0.0"
+  port: 3000
+  ssl:
+    enabled: false
+    cert_path: "/etc/ssl/certs/app.crt"
+    key_path: "/etc/ssl/private/app.key"
+  
+  # Middleware configuration
+  middleware:
+    - name: "cors"
+      options:
+        origin: "*"
+        methods: ["GET", "POST", "PUT", "DELETE"]
+    
+    - name: "rate-limit"
+      options:
+        window_ms: 900000  # 15 minutes
+        max_requests: 100
+
+# Database Configuration
+database:
+  <<: *env  # Merge environment settings
+  pool:
+    min: 2
+    max: 10
+    idle_timeout: 30000
+  
+  migrations:
+    auto_run: true
+    directory: "./migrations"
+  
+  # Connection retry settings
+  retry:
+    attempts: 3
+    delay: 1000
+    backoff: 2.0
+
+# Authentication & Authorization
+auth:
+  jwt:
+    secret: ${JWT_SECRET}
+    expires_in: "24h"
+    algorithm: "HS256"
+  
+  providers:
+    local:
+      enabled: true
+      password_min_length: 8
+    
+    oauth:
+      google:
+        client_id: ${GOOGLE_CLIENT_ID}
+        client_secret: ${GOOGLE_CLIENT_SECRET}
+        scopes: ["email", "profile"]
+      
+      github:
+        client_id: ${GITHUB_CLIENT_ID}
+        client_secret: ${GITHUB_CLIENT_SECRET}
+
+# Feature Flags
+features:
+  user_registration: true
+  email_verification: true
+  two_factor_auth: false
+  admin_panel: true
+  analytics: &analytics
+    enabled: true
+    provider: "google"
+    tracking_id: "GA-XXXXXXXXX"
+
+# Logging Configuration
+logging:
+  level: "info"
+  format: "json"
+  
+  outputs:
+    - type: "console"
+      level: "debug"
+    
+    - type: "file"
+      level: "info"
+      path: "/var/log/app.log"
+      max_size: "100MB"
+      max_files: 5
+    
+    - type: "elasticsearch"
+      level: "warn"
+      host: "elasticsearch:9200"
+      index: "app-logs"
+
+# Cache Configuration
+cache:
+  redis:
+    host: "redis"
+    port: 6379
+    password: ${REDIS_PASSWORD}
+    database: 0
+    
+    # Connection pool
+    pool:
+      size: 10
+      timeout: 5000
+  
+  # Cache strategies
+  strategies:
+    user_sessions:
+      ttl: 3600  # 1 hour
+      max_entries: 10000
+    
+    api_responses:
+      ttl: 300   # 5 minutes
+      max_entries: 1000
+
+# Monitoring & Health Checks
+monitoring:
+  health_checks:
+    - name: "database"
+      endpoint: "/health/db"
+      interval: 30
+      timeout: 5
+    
+    - name: "redis"
+      endpoint: "/health/redis"
+      interval: 30
+      timeout: 3
+  
+  metrics:
+    prometheus:
+      enabled: true
+      endpoint: "/metrics"
+    
+    custom:
+      - name: "user_registrations"
+        type: "counter"
+      - name: "api_response_time"
+        type: "histogram"
+
+# Deployment Configuration
+deployment:
+  strategy: "rolling"
+  replicas: 3
+  
+  resources:
+    requests:
+      cpu: "100m"
+      memory: "128Mi"
+    limits:
+      cpu: "500m"
+      memory: "512Mi"
+  
+  # Auto-scaling
+  autoscaling:
+    enabled: true
+    min_replicas: 2
+    max_replicas: 10
+    target_cpu: 70
+    target_memory: 80
+
+# Version reference
+version_info:
+  app_version: *version
+  config_version: "2.1.0"
+  last_updated: "2025-01-09T10:30:00Z"

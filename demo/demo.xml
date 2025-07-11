@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Midnight Dark Theme Demo - XML -->
+<!-- Demonstrates XML syntax highlighting with various elements and attributes -->
+
+<application xmlns="http://midnighttheme.com/demo"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:config="http://midnighttheme.com/config"
+             xsi:schemaLocation="http://midnighttheme.com/demo demo.xsd">
+    
+    <!-- Application metadata -->
+    <metadata>
+        <name>Midnight Dark Demo</name>
+        <version>1.0.0</version>
+        <description><![CDATA[
+            A comprehensive demo application showcasing XML syntax highlighting
+            with various elements, attributes, and namespaces.
+        ]]></description>
+        <author email="demo@midnighttheme.com">Midnight Theme Team</author>
+        <created>2025-01-09T10:30:00Z</created>
+        <tags>
+            <tag>demo</tag>
+            <tag>xml</tag>
+            <tag>syntax-highlighting</tag>
+        </tags>
+    </metadata>
+    
+    <!-- Configuration section -->
+    <config:configuration>
+        <config:database>
+            <config:host>localhost</config:host>
+            <config:port>5432</config:port>
+            <config:name>midnight_demo</config:name>
+            <config:credentials>
+                <config:username>demo_user</config:username>
+                <config:password encrypted="true">encrypted_password_here</config:password>
+            </config:credentials>
+            <config:pool maxConnections="10" minConnections="2" timeout="30000"/>
+        </config:database>
+        
+        <config:server>
+            <config:host>0.0.0.0</config:host>
+            <config:port>3000</config:port>
+            <config:ssl enabled="false">
+                <config:certificate>/path/to/cert.pem</config:certificate>
+                <config:privateKey>/path/to/key.pem</config:privateKey>
+            </config:ssl>
+        </config:server>
+        
+        <config:features>
+            <config:feature name="userRegistration" enabled="true"/>
+            <config:feature name="emailVerification" enabled="true"/>
+            <config:feature name="twoFactorAuth" enabled="false"/>
+            <config:feature name="adminPanel" enabled="true"/>
+        </config:features>
+    </config:configuration>
+    
+    <!-- User definitions -->
+    <users>
+        <user id="1" role="admin" active="true">
+            <profile>
+                <firstName>John</firstName>
+                <lastName>Doe</lastName>
+                <email verified="true">john@example.com</email>
+                <phone country="+1" verified="false">555-0123</phone>
+                <avatar>https://example.com/avatars/john.jpg</avatar>
+            </profile>
+            <preferences>
+                <theme>dark</theme>
+                <language>en-US</language>
+                <timezone>America/New_York</timezone>
+                <notifications>
+                    <email enabled="true"/>
+                    <push enabled="false"/>
+                    <sms enabled="true"/>
+                </notifications>
+            </preferences>
+            <permissions>
+                <permission resource="users" actions="create,read,update,delete"/>
+                <permission resource="posts" actions="create,read,update,delete"/>
+                <permission resource="settings" actions="read,update"/>
+            </permissions>
+        </user>
+        
+        <user id="2" role="moderator" active="true">
+            <profile>
+                <firstName>Jane</firstName>
+                <lastName>Smith</lastName>
+                <email verified="true">jane@example.com</email>
+                <phone country="+1" verified="true">555-0456</phone>
+            </profile>
+            <preferences>
+                <theme>light</theme>
+                <language>en-US</language>
+                <timezone>America/Los_Angeles</timezone>
+            </preferences>
+            <permissions>
+                <permission resource="posts" actions="read,update,delete"/>
+                <permission resource="comments" actions="read,update,delete"/>
+            </permissions>
+        </user>
+        
+        <user id="3" role="user" active="true">
+            <profile>
+                <firstName>Bob</firstName>
+                <lastName>Wilson</lastName>
+                <email verified="false">bob@example.com</email>
+            </profile>
+            <preferences>
+                <theme>auto</theme>
+                <language>en-US</language>
+                <timezone>UTC</timezone>
+            </preferences>
+            <permissions>
+                <permission resource="posts" actions="create,read"/>
+                <permission resource="comments" actions="create,read,update"/>
+            </permissions>
+        </user>
+    </users>
+    
+    <!-- Content management -->
+    <content>
+        <posts>
+            <post id="1" status="published" featured="true">
+                <title>Welcome to Midnight Dark Theme</title>
+                <slug>welcome-midnight-dark</slug>
+                <author userId="1"/>
+                <content type="markdown"><![CDATA[
+# Welcome to Midnight Dark Theme
+
+This is a comprehensive demo of our beautiful dark theme with excellent syntax highlighting.
+
+## Features
+
+- Beautiful color scheme
+- Excellent readability
+- Multi-language support
+- Professional design
+
+Enjoy coding with Midnight Dark! 🌙✨
+                ]]></content>
+                <metadata>
+                    <created>2025-01-09T08:00:00Z</created>
+                    <updated>2025-01-09T09:15:00Z</updated>
+                    <published>2025-01-09T09:30:00Z</published>
+                    <views>1250</views>
+                    <likes>89</likes>
+                </metadata>
+                <tags>
+                    <tag>theme</tag>
+                    <tag>dark</tag>
+                    <tag>vscode</tag>
+                </tags>
+                <categories>
+                    <category>Themes</category>
+                    <category>Development</category>
+                </categories>
+            </post>
+            
+            <post id="2" status="draft" featured="false">
+                <title>Advanced XML Processing</title>
+                <slug>advanced-xml-processing</slug>
+                <author userId="2"/>
+                <content type="html"><![CDATA[
+<h1>Advanced XML Processing</h1>
+<p>Learn how to work with complex XML documents and schemas.</p>
+<ul>
+    <li>XML parsing techniques</li>
+    <li>Schema validation</li>
+    <li>XSLT transformations</li>
+    <li>XPath queries</li>
+</ul>
+                ]]></content>
+                <metadata>
+                    <created>2025-01-09T10:00:00Z</created>
+                    <updated>2025-01-09T10:30:00Z</updated>
+                    <views>0</views>
+                    <likes>0</likes>
+                </metadata>
+            </post>
+        </posts>
+        
+        <comments>
+            <comment id="1" postId="1" approved="true">
+                <author userId="3"/>
+                <content>Great theme! Love the color scheme.</content>
+                <created>2025-01-09T09:45:00Z</created>
+                <replies>
+                    <comment id="2" parentId="1" approved="true">
+                        <author userId="1"/>
+                        <content>Thank you! We're glad you like it.</content>
+                        <created>2025-01-09T10:00:00Z</created>
+                    </comment>
+                </replies>
+            </comment>
+        </comments>
+    </content>
+    
+    <!-- API endpoints configuration -->
+    <api>
+        <endpoints>
+            <endpoint path="/api/users" method="GET" auth="required">
+                <description>Get list of users</description>
+                <parameters>
+                    <parameter name="page" type="integer" default="1"/>
+                    <parameter name="limit" type="integer" default="10" max="100"/>
+                    <parameter name="role" type="string" optional="true"/>
+                </parameters>
+                <responses>
+                    <response code="200" type="application/json">
+                        <description>List of users</description>
+                    </response>
+                    <response code="401" type="application/json">
+                        <description>Unauthorized</description>
+                    </response>
+                </responses>
+            </endpoint>
+            
+            <endpoint path="/api/posts" method="POST" auth="required">
+                <description>Create a new post</description>
+                <requestBody type="application/json" required="true">
+                    <schema>
+                        <field name="title" type="string" required="true" maxLength="200"/>
+                        <field name="content" type="string" required="true"/>
+                        <field name="tags" type="array" optional="true"/>
+                    </schema>
+                </requestBody>
+            </endpoint>
+        </endpoints>
+    </api>
+    
+    <!-- Localization -->
+    <localization defaultLanguage="en-US">
+        <language code="en-US">
+            <messages>
+                <message key="welcome">Welcome to Midnight Dark</message>
+                <message key="login">Login</message>
+                <message key="logout">Logout</message>
+                <message key="error.required">This field is required</message>
+                <message key="error.invalid_email">Invalid email format</message>
+            </messages>
+        </language>
+        
+        <language code="es-ES">
+            <messages>
+                <message key="welcome">Bienvenido a Midnight Dark</message>
+                <message key="login">Iniciar sesión</message>
+                <message key="logout">Cerrar sesión</message>
+                <message key="error.required">Este campo es obligatorio</message>
+                <message key="error.invalid_email">Formato de email inválido</message>
+            </messages>
+        </language>
+    </localization>
+    
+    <!-- Processing instructions -->
+    <?xml-stylesheet type="text/xsl" href="demo.xsl"?>
+    <?demo-processor version="1.0" mode="development"?>
+    
+</application>
