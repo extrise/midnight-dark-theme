@@ -31,10 +31,13 @@ A mystical Dark theme for VS Code with purple, cyan, and neon green accents that
 - [x] **Soft Pink Strings** - Gentle coloring for string literals
 - [x] **Subtle Gray Comments** - Non-intrusive comment styling
 - [x] **Complete UI Theming** - Consistent design across all VS Code elements
-- [x] **Multi-Language Support** - Optimized for 9+ programming languages
+- [x] **Multi-Language Support** - Optimized for 15+ programming languages
 - [x] **Accessibility Focused** - WCAG compliant color contrast ratios
 - [x] **Terminal Integration** - Matching ANSI color scheme
 - [x] **Git Integration** - Color-coded file status indicators
+- [x] **Bracket Pair Colorization** - 6 unique bracket colors with proper hierarchy
+- [x] **Semantic Token Support** - Enhanced TypeScript/JavaScript and Python highlighting
+- [x] **Professional Language Support** - Comprehensive syntax highlighting for PHP, Java, C#, Go, Rust, Docker, YAML, Shell, SQL, XML
 
 ## Color Palette 🎨
 
@@ -88,13 +91,16 @@ The theme includes optimized syntax highlighting for:
 - [x] **JSON** - Data structures, keys, values
 - [x] **Markdown** - Headings, links, code blocks
 - [x] **JSX/TSX** - React components, props
-- [~] **YAML** - Basic syntax support
-- [~] **SQL** - Basic keyword highlighting
-- [~] **Shell Scripts** - Basic syntax support
-- [ ] **PHP** - Coming soon!
-- [ ] **Java/C#** - Coming soon!
-- [ ] **Go/Rust** - Coming soon!
-- [ ] **Docker** - Coming soon!
+- [x] **PHP** - Variables, functions, classes
+- [x] **Java** - Classes, annotations, types
+- [x] **C#** - Classes, attributes, types
+- [x] **Go** - Functions, types, packages
+- [x] **Rust** - Functions, macros, types
+- [x] **Docker** - Instructions, keywords
+- [x] **YAML** - Keys, values, anchors
+- [x] **Shell/Bash** - Variables, functions, commands
+- [x] **SQL** - Keywords, functions
+- [x] **XML** - Tags, attributes
 - [ ] **More languages planned!**
 
 > [!NOTE]
@@ -171,22 +177,25 @@ We welcome contributions! Here's how you can help:
 
 ### Upcoming Features
 
-- [ ] **Light Theme Variant** - Bright version of Midnight dark
+- [x] **Light Theme Variant** - Bright version of Midnight dark ✅ **COMPLETED**
 - [ ] **High Contrast Variant** - Enhanced accessibility
 - [ ] **Color Customization Panel** - Easy theme personalization
-- [ ] **Additional Language Support** - More programming languages
+- [x] **Additional Language Support** - More programming languages ✅ **COMPLETED**
 - [ ] **Theme Variants** - Different color combinations
-- [ ] **Semantic Token Support** - Enhanced TypeScript/JavaScript highlighting
-- [ ] **Bracket Pair Colorization** - Custom bracket colors
+- [x] **Semantic Token Support** - Enhanced TypeScript/JavaScript highlighting ✅ **COMPLETED**
+- [x] **Bracket Pair Colorization** - Custom bracket colors ✅ **COMPLETED**
+- [ ] **Advanced Semantic Highlighting** - More language-specific semantic tokens
+- [ ] **Custom Color Schemes** - User-configurable color palettes
+- [ ] **Theme Animation Effects** - Smooth transitions and micro-interactions
 
 > [!NOTE]
 > Want to influence our roadmap? [Join the discussion](https://github.com/extrise/midnight-dark-theme/discussions) and share your ideas!
 
 ## Statistics
 
-- **Total Colors Defined**: 200+ UI colors
-- **Syntax Rules**: 50+ token color rules
-- **Language Support**: 9+ programming languages
+- **Total Colors Defined**: 250+ UI colors
+- **Syntax Rules**: 80+ token color rules
+- **Language Support**: 15+ programming languages
 - **File Size**: ~150KB (optimized for performance)
 - **Accessibility**: WCAG AA compliant
 
