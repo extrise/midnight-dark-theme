@@ -19,6 +19,25 @@
     "editor.symbolHighlightBackground": "#33467C40",
     "editorBracketMatch.background": "#33467C80",
     "editorBracketMatch.border": "#c792ea",
+    "editorBracketHighlight.foreground1": "#c792ea",
+    "editorBracketHighlight.foreground2": "#89ddff",
+    "editorBracketHighlight.foreground3": "#c3e88d",
+    "editorBracketHighlight.foreground4": "#f07178",
+    "editorBracketHighlight.foreground5": "#bb9af7",
+    "editorBracketHighlight.foreground6": "#7dcfff",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#f7768e",
+    "editorBracketPairGuide.background1": "#c792ea40",
+    "editorBracketPairGuide.background2": "#89ddff40",
+    "editorBracketPairGuide.background3": "#c3e88d40",
+    "editorBracketPairGuide.background4": "#f0717840",
+    "editorBracketPairGuide.background5": "#bb9af740",
+    "editorBracketPairGuide.background6": "#7dcfff40",
+    "editorBracketPairGuide.activeBackground1": "#c792ea80",
+    "editorBracketPairGuide.activeBackground2": "#89ddff80",
+    "editorBracketPairGuide.activeBackground3": "#c3e88d80",
+    "editorBracketPairGuide.activeBackground4": "#f0717880",
+    "editorBracketPairGuide.activeBackground5": "#bb9af780",
+    "editorBracketPairGuide.activeBackground6": "#7dcfff80",
     "editorCodeLens.foreground": "#5c6370",
     "editorError.foreground": "#f7768e",
     "editorWarning.foreground": "#e0af68",
@@ -498,6 +517,251 @@
       "scope": ["message.info"],
       "settings": {
         "foreground": "#89ddff"
+      }
+    },
+    {
+      "name": "PHP Variables",
+      "scope": ["variable.other.php", "variable.other.property.php"],
+      "settings": {
+        "foreground": "#c792ea"
+      }
+    },
+    {
+      "name": "PHP Functions",
+      "scope": ["entity.name.function.php", "support.function.php"],
+      "settings": {
+        "foreground": "#c792ea",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Java Classes",
+      "scope": ["entity.name.type.class.java", "storage.type.java"],
+      "settings": {
+        "foreground": "#c792ea",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Java Annotations",
+      "scope": ["storage.type.annotation.java"],
+      "settings": {
+        "foreground": "#c3e88d"
+      }
+    },
+    {
+      "name": "C# Classes and Types",
+      "scope": ["entity.name.type.class.cs", "storage.type.cs"],
+      "settings": {
+        "foreground": "#c792ea",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "C# Attributes",
+      "scope": ["entity.name.type.attribute.cs"],
+      "settings": {
+        "foreground": "#c3e88d"
+      }
+    },
+    {
+      "name": "Go Functions",
+      "scope": ["entity.name.function.go", "support.function.go"],
+      "settings": {
+        "foreground": "#c792ea",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Go Types",
+      "scope": ["entity.name.type.go", "storage.type.go"],
+      "settings": {
+        "foreground": "#c3e88d"
+      }
+    },
+    {
+      "name": "Rust Functions",
+      "scope": ["entity.name.function.rust", "support.function.rust"],
+      "settings": {
+        "foreground": "#c792ea",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Rust Macros",
+      "scope": ["entity.name.function.macro.rust"],
+      "settings": {
+        "foreground": "#bb9af7",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Rust Types",
+      "scope": ["entity.name.type.rust", "storage.type.rust"],
+      "settings": {
+        "foreground": "#c3e88d"
+      }
+    },
+    {
+      "name": "Docker Keywords",
+      "scope": [
+        "keyword.other.special-method.dockerfile",
+        "keyword.operator.dockerfile"
+      ],
+      "settings": {
+        "foreground": "#89ddff",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Docker Instructions",
+      "scope": ["entity.name.function.dockerfile"],
+      "settings": {
+        "foreground": "#c792ea",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "YAML Keys",
+      "scope": ["entity.name.tag.yaml"],
+      "settings": {
+        "foreground": "#c792ea"
+      }
+    },
+    {
+      "name": "YAML Values",
+      "scope": ["string.unquoted.yaml"],
+      "settings": {
+        "foreground": "#f07178"
+      }
+    },
+    {
+      "name": "YAML Anchors",
+      "scope": ["entity.name.type.anchor.yaml"],
+      "settings": {
+        "foreground": "#c3e88d"
+      }
+    },
+    {
+      "name": "Shell Variables",
+      "scope": [
+        "variable.other.normal.shell",
+        "variable.other.positional.shell"
+      ],
+      "settings": {
+        "foreground": "#c792ea"
+      }
+    },
+    {
+      "name": "Shell Functions",
+      "scope": ["entity.name.function.shell"],
+      "settings": {
+        "foreground": "#c792ea",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Shell Commands",
+      "scope": ["support.function.builtin.shell"],
+      "settings": {
+        "foreground": "#89ddff"
+      }
+    },
+    {
+      "name": "SQL Keywords",
+      "scope": ["keyword.other.sql"],
+      "settings": {
+        "foreground": "#89ddff",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "SQL Functions",
+      "scope": ["support.function.sql"],
+      "settings": {
+        "foreground": "#c792ea"
+      }
+    },
+    {
+      "name": "XML Tags",
+      "scope": ["entity.name.tag.xml", "entity.name.tag.localname.xml"],
+      "settings": {
+        "foreground": "#89ddff"
+      }
+    },
+    {
+      "name": "XML Attributes",
+      "scope": ["entity.other.attribute-name.xml"],
+      "settings": {
+        "foreground": "#c792ea"
+      }
+    },
+    {
+      "name": "TypeScript Semantic - Classes",
+      "scope": ["entity.name.type.class.ts", "entity.name.type.class.tsx"],
+      "settings": {
+        "foreground": "#c792ea",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "TypeScript Semantic - Interfaces",
+      "scope": [
+        "entity.name.type.interface.ts",
+        "entity.name.type.interface.tsx"
+      ],
+      "settings": {
+        "foreground": "#c3e88d",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "TypeScript Semantic - Type Parameters",
+      "scope": [
+        "entity.name.type.parameter.ts",
+        "entity.name.type.parameter.tsx"
+      ],
+      "settings": {
+        "foreground": "#bb9af7"
+      }
+    },
+    {
+      "name": "TypeScript Semantic - Enums",
+      "scope": ["entity.name.type.enum.ts", "entity.name.type.enum.tsx"],
+      "settings": {
+        "foreground": "#e0af68",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "JavaScript Semantic - Async/Await",
+      "scope": ["storage.modifier.async.js", "storage.modifier.async.ts"],
+      "settings": {
+        "foreground": "#bb9af7",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Python Semantic - Decorators",
+      "scope": ["meta.function.decorator.python"],
+      "settings": {
+        "foreground": "#c3e88d",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Python Semantic - Magic Methods",
+      "scope": ["support.function.magic.python"],
+      "settings": {
+        "foreground": "#bb9af7",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Python Semantic - Type Hints",
+      "scope": ["meta.function.parameters.python"],
+      "settings": {
+        "foreground": "#c3e88d"
       }
     }
   ]
