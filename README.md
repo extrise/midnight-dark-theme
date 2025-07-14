@@ -3,6 +3,8 @@
 A mystical Dark theme for VS Code with purple, cyan, and neon green accents that creates an enchanting coding environment. Perfect for developers who love beautiful, eye-friendly themes with excellent syntax highlighting.
 
 [![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/ExtRise.midnight-dark-theme?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://marketplace.visualstudio.com/items?itemName=ExtRise.midnight-dark-theme)
+[![Tests](https://img.shields.io/github/actions/workflow/status/extrise/midnight-dark-theme/test.yml?style=for-the-badge&logo=github&label=Tests)](https://github.com/extrise/midnight-dark-theme/actions)
+[![Publish](https://img.shields.io/github/actions/workflow/status/extrise/midnight-dark-theme/publish.yml?style=for-the-badge&logo=github&label=Publish)](https://github.com/extrise/midnight-dark-theme/actions)
 [![License](https://img.shields.io/github/license/nayandas69/midnight-dark-theme?style=for-the-badge)](https://github.com/extrise/midnight-dark-theme/blob/main/LICENSE)
 
 ## Pre-view
@@ -16,6 +18,8 @@ A mystical Dark theme for VS Code with purple, cyan, and neon green accents that
 ## Color Themes
 
 - Midnight Dark
+- Midnight High Contrast Dark
+- Midnight High Contrast Light
 - Midnight Soft
 - Midnight Light
 - Midnight Ocean
@@ -178,7 +182,7 @@ We welcome contributions! Here's how you can help:
 ### Upcoming Features
 
 - [x] **Light Theme Variant** - Bright version of Midnight dark ✅ **COMPLETED**
-- [ ] **High Contrast Variant** - Enhanced accessibility
+- [x] **High Contrast Variant** - Enhanced accessibility ✅ **COMPLETED**
 - [ ] **Color Customization Panel** - Easy theme personalization
 - [x] **Additional Language Support** - More programming languages ✅ **COMPLETED**
 - [ ] **Theme Variants** - Different color combinations
