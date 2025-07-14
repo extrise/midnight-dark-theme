@@ -5,7 +5,6 @@ name: Publish Extension
 on:
   push:
     tags:
-      - 'v*.*.*'          # e.g. v1.2.3
       - '*.*.*'           # e.g. 1.2.3
 
 # Required since GitHub’s default token permissions are now read‑only
@@ -72,7 +71,7 @@ jobs:
             - Please file issues on [GitHub](https://github.com/extrise/midnight-dark-theme/issues)
 
             ---
-            **Full Changelog**: https://github.com/extrise/midnight-dark-theme/compare/v0.9.1...${{ steps.meta.outputs.VERSION }}
+            **Full Changelog**: https://github.com/extrise/midnight-dark-theme/compare/v0.9.0...${{ steps.meta.outputs.VERSION }}
           files: midnight-dark-theme-${{ steps.meta.outputs.VERSION }}.vsix
           draft: false
           prerelease: ${{ steps.meta.outputs.PREVIEW == 'true' }}
