@@ -4,6 +4,59 @@ All notable changes to the "Midnight Dark" theme will be documented in this file
 
 ---
 
+## Release [1.0.0] - 2025-07-14
+
+### Major Enhancements Added
+
+- **High Contrast Variants**
+  - **Midnight High Contrast Dark** - Maximum contrast dark theme with pure black background
+  - **Midnight High Contrast Light** - High contrast light theme with pure white background
+  - WCAG AAA compliant contrast ratios (7:1 or higher) for enhanced accessibility
+  - Perfect for users with visual impairments or preference for maximum contrast
+
+- **Bracket Pair Colorization**
+  - 6 unique bracket colors for each theme with proper hierarchy
+  - Active bracket pair guides with enhanced visibility
+  - Unexpected bracket highlighting for error detection
+  - Background guides for better bracket matching
+
+- **Enhanced Language Support**
+  - Added comprehensive syntax highlighting for:
+    - **PHP** - Variables, functions, classes
+    - **Java** - Classes, annotations, types
+    - **C#** - Classes, attributes, types
+    - **Go** - Functions, types, packages
+    - **Rust** - Functions, macros, types
+    - **Docker** - Instructions, keywords
+    - **YAML** - Keys, values, anchors
+    - **Shell/Bash** - Variables, functions, commands
+    - **SQL** - Keywords, functions
+    - **XML** - Tags, attributes
+
+- **Semantic Token Support**
+  - Enhanced highlighting for:
+    - **TypeScript/JavaScript**: Classes, interfaces, type parameters, enums, async/await
+    - **Python**: Decorators, magic methods, type hints
+    - Better semantic understanding of code structure
+
+- **Theme-Specific Color Coordination**
+  - Each theme maintains its unique color palette:
+    - **Midnight Dark**: Purple, cyan, green accent scheme
+    - **Midnight Soft**: Softer pastels with blue/purple tones
+    - **Midnight Light**: High contrast light theme
+    - **Midnight Ocean**: Deep blues and aqua tones
+    - **Midnight Forest**: Nature-inspired greens
+    - **Midnight Monochrome**: Grayscale elegance
+
+### Features
+
+- **Professional-grade syntax highlighting** with enhanced readability and visual hierarchy
+- **Cross-language consistency** across all 6 theme variants
+- **Improved developer experience** with better code structure visualization
+- **Enhanced accessibility** with proper color contrast ratios maintained
+
+---
+
 ## Pre-Release [0.9.2] - 2025-07-09
 
 ### New Color Themes Added
