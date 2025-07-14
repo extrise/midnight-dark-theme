@@ -2,8 +2,8 @@
   "name": "midnight-dark-theme",
   "displayName": "Midnight Dark",
   "description": "A beautiful dark theme with purple, cyan, and neon accents for VS Code",
-  "version": "0.9.2",
-  "preview": true,
+  "version": "1.0.0",
+  "preview": false,
   "publisher": "ExtRise",
   "author": {
     "name": "nayandas69",
@@ -58,6 +58,16 @@
         "label": "Midnight Monochrome",
         "uiTheme": "vs-dark",
         "path": "./themes/midnight-monochrome-color-theme.json"
+      },
+      {
+        "label": "Midnight High Contrast Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/midnight-high-contrast-dark-color-theme.json"
+      },
+      {
+        "label": "Midnight High Contrast Light",
+        "uiTheme": "vs",
+        "path": "./themes/midnight-high-contrast-light-color-theme.json"
       }
     ]
   },
